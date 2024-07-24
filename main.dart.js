@@ -40138,8 +40138,8 @@ wV(a,b){var s=null,r=t.D
 return A.ht(A.a([new A.b6(0,480,"MOBILE"),new A.b6(481,1200,"TABLET"),new A.b6(1201,1/0,"DESKTOP")],t.v),s,A.dB(A.a([A.dO(A.a([A.bc("BETTER DESIGN,\nBETTER EXPERIENCES",s,s,A.dm().$4$color$fontSize$fontWeight$height(B.h,18,B.a2,1.8)),A.fF(s,A.eg(A.bc("DOWNLOAD CV",s,s,A.dm().$3$color$fontSize$fontWeight(B.dj,16,B.a2)),B.al,s,s,s),B.S,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.TI(),s,s,s)],r),B.di,B.t),A.b1(s,50,s),A.aH(s,new A.eE(new A.TJ(a),s),B.j,s,s,s,s,s,s,s,s,s,s)],r),B.bc,B.E,B.t),!1,s,!1)}}
 A.TI.prototype={
 $0(){var s=document.createElement("a")
-s.href="assets/yogesh-resume.pdf"
-s.setAttribute("download","yogesh-resume.pdf")
+s.href="assets/YogeshResume.pdf"
+s.setAttribute("download","YogeshResume.pdf")
 s.click()},
 $S:0}
 A.TJ.prototype={
@@ -40278,7 +40278,7 @@ return A.aH(s,new A.eK(this.xM(A.aW(a,s,t.w).w.a.a*0.8),q,r,s),B.j,s,s,s,s,s,s,s
 xM(a){return A.e6(new A.eE(new A.VL(),null),null,null)}}
 A.VL.prototype={
 $2(a,b){var s,r,q,p,o,n,m,l,k=null,j=A.a([new A.b6(0,480,"MOBILE"),new A.b6(481,1200,"TABLET"),new A.b6(1201,1/0,"DESKTOP")],t.v),i=b.b>720,h=i?B.a4:B.a5,g=i?1:0,f=A.agM(1.5,!0,!0,i?k:350,k,0.8),e=t.Yw
-g=A.fE(A.agN(k,A.a3(new A.a7(A.a(["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg"],t.s),new A.VI(b),e),!0,e.h("aC.E")),f),g)
+g=A.fE(A.agN(k,A.a3(new A.a7(A.a(["assets/1.jpg","assets/2.jpg","assets/3.jpg","assets/4.jpg","assets/5.jpg","assets/6.jpg","assets/7.jpg","assets/8.jpg","assets/9.jpg"],t.s),new A.VI(b),e),!0,e.h("aC.E")),f),g)
 i=i?1:0
 f=A.bc("Flutter (Android / IOS) APP",k,k,A.dm().$3$color$fontSize$fontWeight(B.aG,16,B.a2))
 e=A.b1(k,15,k)
