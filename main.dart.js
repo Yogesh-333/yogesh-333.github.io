@@ -40278,7 +40278,7 @@ return A.aH(s,new A.eK(this.xM(A.aW(a,s,t.w).w.a.a*0.8),q,r,s),B.j,s,s,s,s,s,s,s
 xM(a){return A.e6(new A.eE(new A.VL(),null),null,null)}}
 A.VL.prototype={
 $2(a,b){var s,r,q,p,o,n,m,l,k=null,j=A.a([new A.b6(0,480,"MOBILE"),new A.b6(481,1200,"TABLET"),new A.b6(1201,1/0,"DESKTOP")],t.v),i=b.b>720,h=i?B.a4:B.a5,g=i?1:0,f=A.agM(1.5,!0,!0,i?k:350,k,0.8),e=t.Yw
-g=A.fE(A.agN(k,A.a3(new A.a7(A.a(["appImages/1.jpg","appImages/2.jpg","appImages/3.jpg","appImages/4.jpg","appImages/5.jpg","appImages/6.jpg","appImages/7.jpg","appImages/8.jpg","appImages/9.jpg"],t.s),new A.VI(b),e),!0,e.h("aC.E")),f),g)
+g=A.fE(A.agN(k,A.a3(new A.a7(A.a(["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg"],t.s),new A.VI(b),e),!0,e.h("aC.E")),f),g)
 i=i?1:0
 f=A.bc("Flutter (Android / IOS) APP",k,k,A.dm().$3$color$fontSize$fontWeight(B.aG,16,B.a2))
 e=A.b1(k,15,k)
