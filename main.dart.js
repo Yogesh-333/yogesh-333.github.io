@@ -40110,7 +40110,7 @@ wx(a,b){var s=null,r=t.p
 return A.fN(A.a([new A.b1(0,480,"MOBILE"),new A.b1(481,1200,"TABLET"),new A.b1(1201,1/0,"DESKTOP")],t.v),s,A.dr(A.a([A.dG(A.a([A.bb("BETTER DESIGN,\nBETTER EXPERIENCES",s,s,A.dp().$4$color$fontSize$fontWeight$height(B.h,18,B.a1,1.8)),A.f7(s,A.dQ(A.dG(A.a([A.bb("DOWNLOAD CV",s,s,A.dp().$3$color$fontSize$fontWeight(B.cf,16,B.a1)),A.aZ(s,s,8),A.Xl(B.AU,B.cf,16)],r),B.E,B.eE),B.ab,s,s,s),B.P,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.Tz(),s,s,s)],r),B.dg,B.t),A.aZ(s,50,s),A.aH(s,new A.ed(new A.TA(a),s),B.j,s,s,s,s,s,s,s,s,s,s,s)],r),B.aH,B.E,B.t),!1,s,!1)}}
 A.Tz.prototype={
 $0(){var s=document.createElement("a")
-s.href="https://drive.google.com/file/d/1C1vckQcPae-8gcpkbkKGJ_qZcM7-yrwe/view?usp=sharing"
+s.href="https://drive.google.com/file/d/1-DPfomKX52JQfS-1ICsnh5FeHkBA5w4F/view?usp=sharing"
 s.setAttribute("download","YogeshResume.pdf")
 s.click()},
 $S:0}
