@@ -212,18 +212,6 @@ svg { display: block; }
   align-items: center;
   gap: 0.6rem;
 }
-.rail-mark-wave {
-  width: 40px;
-  height: 20px;
-  overflow: visible;
-}
-.rail-mark-wave path {
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
 .rail-mark-text {
   font-family: var(--font-display);
   font-weight: 700;
