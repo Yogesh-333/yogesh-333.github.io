@@ -1,38 +1,464 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portfolio_web">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>portfolio_web</title>
-  <link rel="manifest" href="manifest.json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yogesh Kumar Gopal - Technical Lead &amp; Engineering Manager &amp; Solutions Architect</title>
+<meta name="description" content="Technical Lead &amp; Solutions Architect building AI-native SaaS, HealthTech, and FinTech platforms. Based in Waterloo, Ontario.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=10">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<canvas id="grainCanvas" aria-hidden="true"></canvas>
+
+<div class="app">
+
+  <!-- ============ RAIL / SIDEBAR NAV ============ -->
+  <header class="rail" id="rail">
+    <div class="rail-top">
+      <a class="rail-mark" href="#hero" aria-label="Back to top">
+        <svg class="rail-mark-wave" viewBox="0 0 48 24" aria-hidden="true">
+          <path d="M0 12 H8 L12 4 L18 20 L23 8 L27 16 L31 10 L35 14 L40 12 H48" />
+        </svg>
+        <span class="rail-mark-text">YKG<span class="dot">.</span></span>
+      </a>
+      <div class="rail-top-controls">
+        <a class="version-link" href="/legacy-flutter-app/" title="View the original Flutter version of this site">Classic version</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+          <svg viewBox="0 0 24 24" class="icon-sun" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          <svg viewBox="0 0 24 24" class="icon-moon" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="rail-id">
+      <div class="rail-id-top">
+        <img class="rail-photo" src="img/yogesh.webp" width="64" height="64" alt="Yogesh Kumar Gopal" loading="eager">
+        <p class="eyebrow">Technical Lead - Engineering Manager - Solutions Architect</p>
+      </div>
+      <h1 class="rail-name">Yogesh Kumar<br>Gopal</h1>
+      <p class="rail-loc">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.6 7-12a7 7 0 1 0-14 0c0 5.4 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+        Waterloo, Ontario, CA
+        <span class="rail-clock" id="railClock" aria-label="Local time in Waterloo">--:--</span>
+      </p>
+    </div>
+
+    <div class="rail-status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <div>
+        <p class="status-line">Listening for the right role</p>
+        <p class="status-sub">Open to Technical Lead / Solutions Architect conversations with engineering leaders in the Canadian tech ecosystem.</p>
+      </div>
+    </div>
+
+    <nav class="rail-nav" aria-label="Section navigation">
+      <ul>
+        <li><a href="#now" data-nav>Now</a></li>
+        <li><a href="#work" data-nav>Work</a></li>
+        <li><a href="#experience" data-nav>Experience</a></li>
+        <li><a href="#stack" data-nav>Stack</a></li>
+        <li><a href="#education" data-nav>Education</a></li>
+        <li><a href="#contact" data-nav>Say hello</a></li>
+      </ul>
+    </nav>
+
+    <div class="rail-foot">
+      <div class="rail-links">
+        <a href="https://www.linkedin.com/in/yogeshkumar333/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Yogesh-333" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:yogeshgopalofficial@gmail.com">Email</a>
+      </div>
+      <p class="rail-copy">© 2026 - Built by hand, no template.</p>
+    </div>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="section hero" id="hero">
+      <p class="eyebrow eyebrow--accent" data-reveal>Signal Intelligence · SaaS · FinTech · HealthTech</p>
+      <h2 class="hero-title" data-reveal>I turn scattered<br>signals into <span class="accent-underline">decisions.</span></h2>
+      <p class="hero-lede" data-reveal>
+        Technical Lead &amp; Engineering Manager &amp; Solutions Architect with 7+ years taking SaaS, HealthTech, and FinTech products from a
+        client's first requirement through architecture to on-time delivery leading engineering teams of 15+
+        along the way. Currently based in Waterloo, Ontario.
+      </p>
+
+      <div class="hero-demo" data-reveal>
+        <div class="hero-demo-visual">
+          <canvas id="signalCanvas" width="900" height="220" role="img"
+            aria-label="Animated 3D visualization of two correlated signal fields converging into a confidence score, illustrating attribution modeling"></canvas>
+          <div class="hero-demo-legend">
+            <span><i class="demo-dot demo-dot--amber"></i>Social attention</span>
+            <span><i class="demo-dot demo-dot--slate"></i>Revenue</span>
+          </div>
+          <div class="hero-demo-score">
+            <span id="scoreValue">%</span>
+            <small>Confidence score</small>
+          </div>
+        </div>
+        <div class="hero-demo-caption">
+          <p><strong>This is roughly what I build.</strong> Two unrelated-looking signals social attention and
+          revenue correlated over time into one confidence score. It's a simplified version of the attribution
+          engine I shipped at FUSE AI, and the same instinct behind SignalOS, the platform I'm architecting now.</p>
+        </div>
+      </div>
+
+      <div class="hero-cta" data-reveal>
+        <a class="btn btn--primary" href="mailto:yogeshgopalofficial@gmail.com">Say hello →</a>
+        <a class="btn btn--ghost" href="#work">See the work ↓</a>
+      </div>
+    </section>
+
+    <!-- NOW -->
+    <section class="section" id="now">
+      <span class="section-mark" aria-hidden="true">01</span>
+      <p class="eyebrow" data-reveal>01 Currently</p>
+      <h3 class="section-title" data-reveal>Architecting SignalOS at G19&nbsp;Studio</h3>
+      <p class="section-lede" data-reveal>
+        Technical Lead for an AI-powered signal-intelligence platform (in progress, for Signal Labs), leading both
+        architecture and the engineering team.
+      </p>
+      <div class="now-grid">
+        <p class="now-copy" data-reveal>
+          Architected an end-to-end AI pipeline combining LLM-driven semantic modeling, statistically validated
+          signal detection, and vector-embedding correlation. Built a closed-loop feedback system where human
+          decisions continuously refine AI signal weights a self-improving intelligence layer. Leading a
+          multi-tenant deployment with zero-data-movement compliance, cloud-agnostic infrastructure, and GitOps CI/CD.
+        </p>
+        <ul class="tag-row" data-reveal aria-label="Technologies used on SignalOS">
+          <li>LangGraph</li><li>Claude API</li><li>pgvector</li><li>FastAPI</li><li>PostgreSQL</li>
+          <li>Redis</li><li>Kubernetes</li><li>Helm</li><li>Terraform</li><li>ArgoCD</li><li>React / Next.js</li><li>Vault</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <span class="section-mark" aria-hidden="true">02</span>
+      <p class="eyebrow" data-reveal>02 Delivered</p>
+      <h3 class="section-title" data-reveal>Shipped under real constraints</h3>
+      <p class="section-lede" data-reveal>Four platforms taken from architecture to production each one live, each one someone else's business depending on it.</p>
+
+      <div class="dossier" id="dossier">
+
+        <article class="dossier-row" data-reveal>
+          <button class="dossier-head" aria-expanded="false">
+            <span class="dossier-meta">
+              <span class="dossier-status dossier-status--done">Delivered</span>
+              <span class="dossier-domain">FinTech / MarTech</span>
+            </span>
+            <span class="dossier-name">FUSE AI <span class="dossier-sub"> ROI Attribution Engine</span></span>
+            <svg class="dossier-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="dossier-body"><div class="dossier-body-inner">
+            <p>Directed architecture and on-time delivery of a multi-tenant SaaS attribution platform, navigating
+            multiple architectural pivots to launch on a committed timeline. Engineered a proprietary
+            <strong>Confidence Score</strong> algorithm synthesizing time correlation and UTM evidence to solve
+            fintech's "dark social" attribution problem connecting TikTok/Instagram activity to GA4 revenue data.
+            Built async pipelines for real-time revenue tracking.</p>
+            <ul class="tag-row tag-row--sm">
+              <li>Django</li><li>React</li><li>AWS</li><li>GCP</li><li>Celery</li><li>Redis</li><li>GA4 Data API</li>
+            </ul>
+          </div></div>
+        </article>
+
+        <article class="dossier-row" data-reveal>
+          <button class="dossier-head" aria-expanded="false">
+            <span class="dossier-meta">
+              <span class="dossier-status dossier-status--done">Delivered</span>
+              <span class="dossier-domain">EdTech</span>
+            </span>
+            <span class="dossier-name">Africa 2100 <span class="dossier-sub"> Secure Screening Platform</span></span>
+            <svg class="dossier-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="dossier-body"><div class="dossier-body-inner">
+            <p>Led full-lifecycle delivery of a secure screening platform on Django REST Framework. Implemented
+            JWT/OTP authentication and AWS Secrets Manager for credential handling, and integrated OpenAI Whisper
+            and AWS Polly into automated transcription and grading pipelines plus payment integration via Stripe.</p>
+            <ul class="tag-row tag-row--sm">
+              <li>Django REST</li><li>Stripe</li><li>OpenAI Whisper</li><li>AWS Polly</li><li>AWS Secrets Manager</li>
+            </ul>
+          </div></div>
+        </article>
+
+        <article class="dossier-row" data-reveal>
+          <button class="dossier-head" aria-expanded="false">
+            <span class="dossier-meta">
+              <span class="dossier-status dossier-status--done">Delivered</span>
+              <span class="dossier-domain">FinTech</span>
+            </span>
+            <span class="dossier-name">Aila Money <span class="dossier-sub"> UK-Compliant Financial App</span></span>
+            <svg class="dossier-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="dossier-body"><div class="dossier-body-inner">
+            <p>Directed backend and mobile delivery for a UK-compliant financial application, end to end bank-grade
+            security, cross-platform performance, and a Flutter client shipped on optimized AWS infrastructure for
+            both iOS and Android.</p>
+            <ul class="tag-row tag-row--sm">
+              <li>Flutter</li><li>AWS</li><li>Cross-platform</li><li>UK compliance</li>
+            </ul>
+          </div></div>
+        </article>
+
+        <article class="dossier-row" data-reveal>
+          <button class="dossier-head" aria-expanded="false">
+            <span class="dossier-meta">
+              <span class="dossier-status dossier-status--done">Delivered</span>
+              <span class="dossier-domain">HealthTech</span>
+            </span>
+            <span class="dossier-name">SMART Centre <span class="dossier-sub"> Open-Source Medical Scribe</span></span>
+            <svg class="dossier-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="dossier-body"><div class="dossier-body-inner">
+            <p>Contributed to an open-source, AI-powered medical scribe using Whisper AI and the Gemma LLM to
+            automate clinical documentation in SOAP-note format, fine-tuning NLP pipelines for hallucination
+            reduction and local-first data privacy, and integrating with Oscar EMR to streamline physician workflow.</p>
+            <p class="dossier-stat"><span>83%+</span> real-time transcription accuracy in clinical scenarios</p>
+            <ul class="tag-row tag-row--sm">
+              <li>Whisper AI</li><li>Gemma LLM</li><li>Oscar EMR</li><li>NLP</li>
+            </ul>
+          </div></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <span class="section-mark" aria-hidden="true">03</span>
+      <p class="eyebrow" data-reveal>03 Experience</p>
+      <h3 class="section-title" data-reveal>Six years, one direction: bigger systems, more ownership</h3>
+
+      <ol class="ledger" id="ledger">
+        <li class="ledger-row" data-reveal>
+          <span class="ledger-date">2024 - Present</span>
+          <div>
+            <p class="ledger-role">Technical Lead <span class="ledger-org">- G19 Studio</span></p>
+            <p class="ledger-copy">Driving end-to-end technical architecture and delivery for high-impact SaaS, HealthTech, and FinTech clients, across SignalOS, FUSE AI, Africa 2100, and Aila Money.</p>
+          </div>
+        </li>
+        <li class="ledger-row" data-reveal>
+          <span class="ledger-date">Jan - Apr 2025</span>
+          <div>
+            <p class="ledger-role">AI Software Developer <span class="ledger-org">- SMART Centre, Cambridge ON</span></p>
+            <p class="ledger-copy">Built the open-source AI medical scribe above; ran applied research on speech recognition and clinical NLP.</p>
+          </div>
+        </li>
+        <li class="ledger-row" data-reveal>
+          <span class="ledger-date">2023 - 2024</span>
+          <div>
+            <p class="ledger-role">Assistant Engineering Manager <span class="ledger-org">- India Health Link</span></p>
+            <p class="ledger-copy">Led 15+ developers building cloud-based health-tech, compliant with ABHA and FHIR standards for interoperable patient data exchange; cut processing times 20% across C#/.NET services.</p>
+          </div>
+        </li>
+        <li class="ledger-row" data-reveal>
+          <span class="ledger-date">2022 - 2023</span>
+          <div>
+            <p class="ledger-role">Cloud Development Engineer <span class="ledger-org">- India Health Link</span></p>
+            <p class="ledger-copy">Built hybrid cloud infrastructure and secure data pipelines on Azure; achieved VAPT certification for cloud and mobile security compliance.</p>
+          </div>
+        </li>
+        <li class="ledger-row" data-reveal>
+          <span class="ledger-date">2021 - 2022</span>
+          <div>
+            <p class="ledger-role">Full-Stack Engineer <span class="ledger-org">-  India Health Link</span></p>
+            <p class="ledger-copy">Shipped a Flutter health-tracking app integrating Apple HealthKit and Google Fit; RESTful APIs across the platform lifted engagement 25%.</p>
+          </div>
+        </li>
+        <li class="ledger-row" data-reveal>
+          <span class="ledger-date">2020 - 2021</span>
+          <div>
+            <p class="ledger-role">Mobile Developer <span class="ledger-org">- India Health Link</span></p>
+            <p class="ledger-copy">Built a teleconsultation module for remote health visits with real-time sync via Firestore and Firebase.</p>
+          </div>
+        </li>
+
+        <li class="ledger-toggle-row">
+          <button class="ledger-toggle" id="ledgerToggle" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            Show earlier roles (2017 - 2020)
+          </button>
+        </li>
+
+        <li class="ledger-row ledger-row--earlier" data-reveal hidden>
+          <span class="ledger-date">2019 - 2020</span>
+          <div>
+            <p class="ledger-role">Technical Support Product Specialist <span class="ledger-org">- Varnam Solutions</span></p>
+            <p class="ledger-copy">Microsoft product support, Chennai, India.</p>
+          </div>
+        </li>
+        <li class="ledger-row ledger-row--earlier" data-reveal hidden>
+          <span class="ledger-date">2017 - 2018</span>
+          <div>
+            <p class="ledger-role">Web Development Intern <span class="ledger-org">- Elseif Technologies</span></p>
+            <p class="ledger-copy">Web development; scanned production sites for vulnerabilities with Acunetix and Burp Suite and reported findings.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- STACK -->
+    <section class="section" id="stack">
+      <span class="section-mark" aria-hidden="true">04</span>
+      <p class="eyebrow" data-reveal>04 - Stack</p>
+      <h3 class="section-title" data-reveal>What I actually build with</h3>
+      <p class="section-lede" data-reveal>No percentage bars either I've shipped with it, or it's not listed.</p>
+
+      <div class="channels">
+        <div class="channel" data-reveal>
+          <p class="channel-label">Languages</p>
+          <ul class="tag-row"><li>Python - Django / FastAPI</li><li>C# - .NET Core</li><li>Dart - Flutter</li><li>SQL</li></ul>
+        </div>
+        <div class="channel" data-reveal>
+          <p class="channel-label">AI &amp; Data</p>
+          <ul class="tag-row"><li>LangGraph</li><li>Claude API</li><li>OpenAI API</li><li>Whisper AI</li><li>Gemma LLM</li><li>Vector databases / pgvector</li></ul>
+        </div>
+        <div class="channel" data-reveal>
+          <p class="channel-label">Cloud &amp; DevOps</p>
+          <ul class="tag-row"><li>AWS - S3, RDS, Secrets Manager</li><li>GCP</li><li>Azure</li><li>Docker</li><li>Kubernetes</li><li>Helm</li><li>Terraform</li><li>ArgoCD</li><li>CI/CD</li></ul>
+        </div>
+        <div class="channel" data-reveal>
+          <p class="channel-label">Certifications &amp; Community</p>
+          <div class="channel-stack">
+            <a class="gdg-badge" href="https://gdg.community.dev/gdg-waterloo/" target="_blank" rel="noopener">
+              <span class="gdg-badge-dot" aria-hidden="true"></span>
+              <span class="gdg-badge-text">Volunteer, GDG Waterloo <span class="gdg-badge-sub">Google Developer Group - official profile</span></span>
+              <span class="gdg-badge-arrow" aria-hidden="true">↗</span>
+            </a>
+            <ul class="tag-row"><li>Career Essentials in Generative AI - Microsoft &amp; LinkedIn</li><li>Terraform</li><li>Kubernetes</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <span class="section-mark" aria-hidden="true">05</span>
+      <p class="eyebrow" data-reveal>05 - Education</p>
+      <h3 class="section-title" data-reveal>Still learning, deliberately</h3>
+
+      <ol class="ledger">
+        <li class="ledger-row" data-reveal>
+          <span class="ledger-date">2025</span>
+          <div>
+            <p class="ledger-role">Postgrad Certificate, Applied AI &amp; Machine Learning <span class="ledger-org">- Conestoga College</span></p>
+          </div>
+        </li>
+        <li class="ledger-row" data-reveal>
+          <span class="ledger-date">2024 - 2025</span>
+          <div>
+            <p class="ledger-role">Postgrad Certificate, Software Quality Assurance &amp; Test Engineering <span class="ledger-org">- Conestoga College</span></p>
+          </div>
+        </li>
+        <li class="ledger-row" data-reveal>
+          <span class="ledger-date">2018 - 2020</span>
+          <div>
+            <p class="ledger-role">Master of Computer Applications (MCA), Computer Science <span class="ledger-org">- Gurunanak College</span></p>
+          </div>
+        </li>
+        <li class="ledger-row" data-reveal>
+          <span class="ledger-date">2015 - 2018</span>
+          <div>
+            <p class="ledger-role">Bachelor's Degree, Computer Science <span class="ledger-org">- Gurunanak College</span></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="testimonials">
+      <span class="section-mark" aria-hidden="true">06</span>
+      <p class="eyebrow" data-reveal>06 - In others' words</p>
+      <h3 class="section-title" data-reveal>What it's like to work with me</h3>
+
+      <div class="quotes">
+        <blockquote class="quote" data-reveal>
+          <p>"Dreams2Ventures recently completed a successful rollout of an AI-native mobile application, with
+          Yogesh serving as the technical lead and providing critical technical oversight. I was genuinely impressed
+          by the depth of his expertise, his technical precision, and his strategic insight his leadership was
+          steady, deliberate, and inspiring, guiding the team through challenges with confidence and focus."</p>
+          <footer>
+            <img src="img/chudi-obiaya.webp" alt="" width="44" height="44" loading="lazy">
+            <div><cite>Chudi Obiaya</cite><span>Founder, Dreams2Ventures</span></div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="quote" data-reveal>
+          <p>"Yogesh has consistently demonstrated expertise in backend technologies, delivering robust and scalable
+          solutions that exceed expectations. He has a knack for understanding business priorities and keeping the
+          team on track, and his clear communication fosters collaboration across every level of a project."</p>
+          <footer>
+            <img src="img/elisabeth-prager.webp" alt="" width="44" height="44" loading="lazy">
+            <div><cite>Elisabeth Prager</cite><span>Founder &amp; CEO, ImprovES ApS</span></div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="quote" data-reveal>
+          <p>"On the Aila Money app, Yogesh and his team developed mobile applications for both iOS and Android
+          alongside the cloud infrastructure behind them, ensuring seamless functionality. He deeply understands the
+          product, proactively challenges assumptions, and foresees issues before they become problems."</p>
+          <footer>
+            <img src="img/nitika-vyas.webp" alt="" width="44" height="44" loading="lazy">
+            <div><cite>Nitika Vyas</cite><span>Co-Founder, Aila Money</span></div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="quote" data-reveal>
+          <p>"I have witnessed Yogesh's exceptional leadership and technical skills over the past three years. His
+          dedication to project success and innovative approach have significantly contributed to our team's
+          achievements."</p>
+          <footer>
+            <img src="img/sumithra.webp" alt="" width="44" height="44" loading="lazy">
+            <div><cite>Sumithra Narashiman</cite><span>Senior Engineering Manager, India Health Link</span></div>
+          </footer>
+        </blockquote>
+
+        
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <footer class="section contact" id="contact">
+      <span class="section-mark" aria-hidden="true">07</span>
+      <p class="eyebrow" data-reveal>07 - Say hello</p>
+      <h3 class="section-title" data-reveal>Let's build something that has to work.</h3>
+      <p class="section-lede" data-reveal>
+        Open to Technical Lead and Solutions Architect roles, and to conversations with engineering leaders across
+        the Canadian tech ecosystem - remote or hybrid.
+      </p>
+
+      <div class="contact-grid" data-reveal>
+        <a class="btn btn--primary btn--lg" href="mailto:yogeshgopalofficial@gmail.com">yogeshgopalofficial@gmail.com</a>
+        <div class="contact-links">
+          <a href="tel:+14168249791">+1 (416) 824-9791</a>
+          <a href="https://www.linkedin.com/in/yogeshkumar333/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/Yogesh-333" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="contact-foot">
+        <span>Waterloo, Ontario, Canada</span>
+        <span>© 2026 Yogesh Kumar Gopal</span>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<div class="signal-float" aria-hidden="true">
+  <canvas id="signalFloatCanvas" width="200" height="200" role="presentation"></canvas>
+</div>
+
+<script src="js/main.js?v=9"></script>
 </body>
 </html>
